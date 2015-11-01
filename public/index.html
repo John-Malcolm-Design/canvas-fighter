@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>Socket.IO chat</title>
+<title>Canvas Fighter</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font: 13px Helvetica, Arial; background: #fff;}
@@ -21,11 +21,13 @@
   </style>
 </head>
 <body>
-    <ul id="messages"></ul>
 
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
+  <!-- Chat Section -->
+  <ul id="messages"></ul>
+  <form action="">
+    <input id="m" autocomplete="off" /><button>Send</button>
+  </form>
+
   <canvas id="canvas" width="800" height="600">
     <div style="display:none;">
       <!-- Welcome Screen Resources -->
@@ -37,7 +39,6 @@
       width="280" height="129">
       <img id="play-intro" src="images/canvas-fighter-title.png"
       width="472" height="251">
-
       <!-- Pick Player Screen Resources -->
       <img id="select-player" src="images/select-player.png"
       width="576" height="40">
@@ -53,16 +54,14 @@
       width="70" height="48">
       <img id="right-arrow" src="images/right-arrow.png"
       width="70" height="48">
-
-      <!-- Game Screen Resources -->
+      <!-- Active Game Screen Resources -->
       <img id="bg-game" src="images/bg-game.png"
       width="800" height="600">
-    </canvas>
+    </div>
+  </canvas>
 
-
-
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script src="game.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>

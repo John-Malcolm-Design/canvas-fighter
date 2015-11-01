@@ -16,8 +16,8 @@ io.on('connection', function(socket){
     io.emit('chat message', msg);
   });
 
-  socket.on('new game', function(msg){
-    io.emit('new game', msg);
+  socket.on('new game', function(msg, x, y){
+    io.emit('new game', msg, x, y);
   });
   
 });
